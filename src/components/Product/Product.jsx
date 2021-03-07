@@ -15,12 +15,16 @@ const Product = ({ product }) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image="" title={product.name} />
+      <CardMedia
+        className={classes.media}
+        image={product.image}
+        title={product.name}
+      />
       <CardContent>
         <div className={classes.CardContent}>
           <Typography variant="h5">{product.name}</Typography>
-          <Typography variant="h6">{product.description}</Typography>
           <Typography variant="h5">{product.price}</Typography>
+          <Typography variant="body2">{product.description}</Typography>
         </div>
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
